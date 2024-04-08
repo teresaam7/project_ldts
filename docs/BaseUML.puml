@@ -1,0 +1,291 @@
+@startuml
+'https://plantuml.com/class-diagram'
+
+skinparam linetype polyline
+skinparam linetype ortho
+skinparam groupInheritance 2
+
+skinparam ClassBackgroundColor<<model>> SkyBlue
+skinparam ClassBackgroundColor<<viewer>> Khaki
+skinparam ClassBackgroundColor <<state>> LightBlue
+skinparam ClassBackgroundColor<<controller>> LightCoral
+
+
+class GameObjectViewer <<viewer>>{
+    + draw(gameObject, GUI)
+}
+
+class MariViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+
+class WallViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class KeyViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class GhostEnemyViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class BatEnemyViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class MapViewer <<viewer>> {
+    + draw(GUI)
+}
+
+class PlatformViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class PotionViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class TrapViewer <<viewer>> {
+    + draw(gameObject, GUI)
+}
+
+class StartViewer <<viewer>> {
+    + draw(GUI)
+}
+
+class GameOverViewer <<viewer>> {
+    + draw(GUI)
+}
+
+class PauseViewer <<viewer>> {
+    + draw(GUI)
+}
+
+class InstructionsViewer <<viewer>> {
+    + draw(GUI)
+}
+
+class WinViewer <<viewer>> {
+    + draw(GUI)
+}
+
+
+abstract class Viewer <<viewer>> {
+    + draw(GUI)
+}
+
+GameObjectViewer -- MariViewer
+GameObjectViewer -- BatEnemyViewer
+GameObjectViewer -- GhostEnemyViewer
+GameObjectViewer -- WallViewer
+GameObjectViewer -- PotionViewer
+GameObjectViewer -- TrapViewer
+GameObjectViewer -- KeyViewer
+GameObjectViewer -- PlatformViewer
+MapViewer -- GameObjectViewer
+Viewer *-- MapViewer
+Viewer *-- GameOverViewer
+Viewer *-- StartViewer
+Viewer *-- WinViewer
+Viewer *-- PauseViewer
+Viewer *-- InstructionsViewer
+
+class Position <<model>> {
+    x : double
+    y : double
+}
+
+abstract GameObject <<model>> {
+    - position : Position
+}
+
+abstract class Enemy <<model>> {
+    + move()
+}
+
+
+class Wall <<model>> {
+
+}
+
+
+class GhostEnemy <<model>> {
+
+}
+
+class BatEnemy <<model>> {
+
+}
+
+class Mari <<model>> {
+
+}
+
+class Key <<model>> {
+
+}
+
+class Map <<model>> {
+
+}
+
+class MapBuilder <<model>> {
+
+}
+
+class Platform <<model>> {
+
+}
+
+class Door <<model>> {
+
+}
+
+class Potion <<model>> {
+
+}
+
+class Trap <<model>> {
+
+}
+
+class Start <<model>> {
+
+}
+
+class GameOver <<model>> {
+
+}
+
+class Win <<model>> {
+
+}
+
+class Pause <<model>> {
+
+}
+
+class Instructions <<model>> {
+
+}
+
+GameObject -- Mari
+GameObject -- Door
+GameObject -- Potion
+GameObject -- Trap
+GameObject -- Enemy
+GameObject -- BatEnemy
+GameObject -- GhostEnemy
+GameObject -- Wall
+GameObject -- Key
+Wall <|-- Platform
+Enemy <|-- GhostEnemy
+Enemy <|-- BatEnemy
+
+Map -- GameObject
+Position -- GameObject
+Map-- MapBuilder
+
+class StartController <<controller>> {
+    + step (main, action, time)
+}
+
+class GameOverController <<controller>> {
+    + step (main, action, time)
+}
+
+class PauseController <<controller>> {
+    + step (main, action, time)
+}
+
+class InstructionsController <<controller>> {
+    + step (main, action, time)
+}
+
+class WinController <<controller>> {
+    + step (main, action, time)
+}
+
+class MariController <<controller>> {
+    + step (main, action, time)
+}
+
+class GhostEnemyController <<controller>> {
+    + step (main, action, time)
+}
+
+class BatEnemyController <<controller>> {
+    + step (main, action, time)
+}
+
+class PlatformController <<controller>> {
+    + step (main, action, time)
+}
+
+class CameraController <<controller>> {
+    + step (main, action, time)
+}
+
+class PotionController <<controller>> {
+    + step (main, action, time)
+}
+
+abstract LevelController <<controller>> {
+
+}
+
+abstract class Controller <<controller>> {
+    + step (main, action, time)
+}
+LevelController -- MariController
+LevelController -- BatEnemyController
+LevelController -- CameraController
+LevelController -- GhostEnemyController
+LevelController -- PlatformController
+LevelController -- PotionController
+
+Controller *-- LevelController
+Controller *-- GameOverController
+Controller *-- StartController
+Controller *-- WinController
+Controller *-- PauseController
+Controller *-- InstructionsController
+
+
+
+
+class StartState #line:mediumslateblue;back:plum
+class GameOverState #line:mediumslateblue;back:plum
+class WinState #line:mediumslateblue;back:plum
+class PauseState #line:mediumslateblue;back:plum
+class InstructionsState #line:mediumslateblue;back:plum
+abstract State #line:mediumslateblue;back:plum
+class LevelState #line:mediumslateblue;back:plum
+
+
+
+State -- LevelState
+State <|-- StartState
+State <|-- GameOverState
+State -- WinState
+State <|-- PauseState
+State -- InstructionsState
+
+LevelState <|--Map
+StartState <|-- Start
+GameOverState <|-- GameOver
+WinState <|-- Win
+PauseState <|-- Pause
+InstructionsState <|-- Instructions
+
+class Main #line:mediumslateblue;back:MediumAquaMarine
+
+
+Main <-- State
+Controller <-- State
+Viewer <-- State
+
+@enduml

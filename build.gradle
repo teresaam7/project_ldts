@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'info.solidsoft.pitest' version '1.15.0'
+    id 'org.kordamp.gradle.errorprone' version '0.53.0'
+    id 'application'
+}
+
+group = 'com.st.projectst'
+version = '1.0-SNAPSHOT'
+
+
+
+application {
+    mainClass.set("com.st.projectst.Main")
+}
+
+repositories {
+    mavenCentral()
+}
+
+pitest {
+    junit5PluginVersion = '1.2.0'
+    targetClasses = ['com.st.projectst.model.*', 'com.st.projectst.states.*', 'com.st.projectst.viewer.*','com.st.projectst.controller.game.*', 'com.st.projectst.controller.Controller']
+}
+
+dependencies {
+    implementation group: 'com.googlecode.lanterna', name: 'lanterna', version: '3.1.1'
+    implementation 'com.groupcdg:pitest-annotations:1.1.2'
+    testImplementation 'org.mockito:mockito-core:3.7.7'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Controller.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.st.projectst.controller;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.st.projectst.Main;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.st.projectst.gui.GUI;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.awt.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.URISyntaxException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public abstract class Controller&#60;T&#62; {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final T model;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public Controller(T model) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.model = model;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public T getModel() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_18'>1</a>
+<span>
+
+1. getModel : replaced return value with null for com/st/projectst/controller/Controller::getModel &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return model;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public abstract void step(Main main, GUI.ACTION action, long time) throws IOException, URISyntaxException, FontFormatException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6ae62c7e_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6ae62c7e_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getModel<br/><b>Killed by : </b>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testChangedConditionalBoundary()]</span></span> replaced return value with null for com/st/projectst/controller/Controller::getModel &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testChangedConditionalBoundary()] (0 ms)</li><li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testReplacedBooleanReturn()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariUp()] (0 ms)</li><li>com.st.projectst.controller.game.PlatformControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PlatformControllerTest]/[method:testLongSubtractionWithAddition()] (1 ms)</li><li>com.st.projectst.controller.game.GhostEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.GhostEnemyControllerTest]/[method:testStepMove()] (1 ms)</li><li>com.st.projectst.controller.game.BatEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.BatEnemyControllerTest]/[method:testStepMovement2()] (1 ms)</li><li>com.st.projectst.controller.game.GhostEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.GhostEnemyControllerTest]/[method:testStepMoveToEmptyPosition()] (2 ms)</li><li>com.st.projectst.controller.game.BatEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.BatEnemyControllerTest]/[method:testStepMovement()] (2 ms)</li><li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testPotionNonVisibilityLoop()] (3 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariWhenNotEmpty()] (0 ms)</li><li>com.st.projectst.controller.game.GhostEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.GhostEnemyControllerTest]/[method:testReplacedLongSubtractionWithAddition()] (4 ms)</li><li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testPotionVisibilityToggle()] (4 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariWhenEmpty()] (0 ms)</li><li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testVisibilityAndNonUpdatePositions()] (3 ms)</li><li>com.st.projectst.controller.game.GhostEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.GhostEnemyControllerTest]/[method:testStepMoveToNonEmptyPosition()] (8 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariLeft()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveRemoveKey()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariWhenEmpty2()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariRight()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariSidesHead2()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariSides2()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariTopHead()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariSidesHead()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariSides()] (1 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepActionRight()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepActionLeft()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testMoveMariWithKey()] (0 ms)</li><li>com.st.projectst.controller.game.PlatformControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PlatformControllerTest]/[method:testStep()] (22 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariWithPotion()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariDoubleJump2()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariGrounded()] (1 ms)</li><li>com.st.projectst.controller.game.CameraControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.CameraControllerTest]/[method:testStep()] (4 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testIsAtPlatformPosition()] (0 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepActionUpJump()] (1 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepActionUp()] (1 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testAttackMari()] (1 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testLastAttackMari()] (2 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariDoubleJump()] (8 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepActionUpPotion()] (5 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariResetJumps()] (10 ms)</li><li>com.st.projectst.controller.game.PotionControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.PotionControllerTest]/[method:testToggleVisibilityAndUpdatePositions()] (46 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testStepMoveToEnemyPosition()] (27 ms)</li><li>com.st.projectst.controller.game.MariControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.MariControllerTest]/[method:testUpdateMariResetJumps2()] (48 ms)</li><li>com.st.projectst.controller.game.BatEnemyControllerTest.[engine:junit-jupiter]/[class:com.st.projectst.controller.game.BatEnemyControllerTest]/[method:testStepTimeDelay()] (442 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.15.0
+
+</body>
+</html>
